@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import store from "../components/store";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 function Login() {
   const dispatch = useDispatch();
@@ -90,6 +91,11 @@ function Login() {
           </button>
         </div>
       </form>
+      <div className="text-center">
+        <Link className="btn btn-primary mt-2 px-4" to="/login">
+          Log in
+        </Link>
+      </div>
       <Footer />
     </div>
   );
