@@ -93,7 +93,7 @@ function Login() {
       </form>
       <div className="text-center">
         <Link className="btn btn-primary mt-2 px-4" to="/">
-          Log in
+          Register
         </Link>
       </div>
       <Footer />
