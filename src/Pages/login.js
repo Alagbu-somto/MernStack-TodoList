@@ -57,7 +57,7 @@ function Login() {
   }
 
   return (
-    <div className="row">
+    <div className="row m-4">
       <h1 className="text-center col-md-12">Login</h1>
       <form onSubmit={submit} className="col-md-12">
         <div className="mb-3">

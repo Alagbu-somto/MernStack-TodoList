@@ -1,6 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: linear-gradient(120deg, #a1c4fd 50%, #c2e9fb 50%);
-  min-height: 70vh;
   padding: 1rem;
   box-sizing: border-box;
   display: flex;
@@ -22,7 +27,7 @@ body {
   max-width: 500px;
   min-width: 250px;
   background: #f1f5f8;
-  background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+  background-image: radial-gradient(#fdcb6e 7.2%, transparent 0);
   background-size: 25px 25px;
   border-radius: 20px;
   box-shadow: 4px 3px 7px 2px #00000040;

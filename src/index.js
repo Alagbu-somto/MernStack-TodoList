@@ -7,7 +7,6 @@ import Login from "./Pages/login";
 import Test from "./Pages/errorPage";
 import { Provider } from "react-redux";
 import "./app.css";
-// import axios from "axios";
 
 function check() {
   const testi = localStorage.getItem("hey");

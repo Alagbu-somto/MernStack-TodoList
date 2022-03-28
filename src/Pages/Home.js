@@ -36,9 +36,9 @@ function HomePage() {
   }
 
   return (
-    <div className="row">
+    <div className="row m-4">
       <h1 className="text-center col-md-12">Register</h1>
-      <form onSubmit={submit} className="col-md-12">
+      <form onSubmit={submit} className="col-md-10 mx-auto">
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
             Email address

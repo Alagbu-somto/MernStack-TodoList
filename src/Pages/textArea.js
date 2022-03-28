@@ -94,7 +94,7 @@ function TextArea() {
 
   let sday = today.toLocaleDateString("en-Us", options);
   return (
-    <div className="row">
+    <div className="row m-4">
       <h3 className="text-center text-white col-md-12">
         Hey Welcome to Your Todo-list!
       </h3>
