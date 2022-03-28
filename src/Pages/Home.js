@@ -18,7 +18,10 @@ function HomePage() {
   }
   function submit(event) {
     axios
-      .post("http://localhost:5000/register", { email, password })
+      .post("https://fierce-dawn-27051.herokuapp.com/register", {
+        email,
+        password,
+      })
       .then((res) => {
         const data = res.data.status;
         if (data === true) {
@@ -33,9 +36,9 @@ function HomePage() {
   }
 
   return (
-    <div>
-      <h1 className="text-center">Register</h1>
-      <form onSubmit={submit}>
+    <div className="row">
+      <h1 className="text-center col-md-12">Register</h1>
+      <form onSubmit={submit} className="col-md-12">
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
             Email address
@@ -70,12 +73,12 @@ function HomePage() {
           </button>
         </div>
       </form>
-      <div className="text-center">
+      <div className="text-center col-md-12">
         <Link className="btn btn-primary mt-2 px-4" to="/login">
           Log in
         </Link>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

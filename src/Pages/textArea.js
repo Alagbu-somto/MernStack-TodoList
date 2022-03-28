@@ -15,7 +15,7 @@ function TextArea() {
   const email = localStorage.getItem("email");
   const password = localStorage.getItem("password");
   axios
-    .post("http://localhost:5000/screen", {
+    .post("https://fierce-dawn-27051.herokuapp.com/screen", {
       email,
       password,
     })
@@ -44,7 +44,7 @@ function TextArea() {
     const email = localStorage.getItem("email");
     const password = localStorage.getItem("password");
     axios
-      .post("http://localhost:5000/list", {
+      .post("https://fierce-dawn-27051.herokuapp.com/list", {
         name: Text,
         ID: Id,
         email,
@@ -71,7 +71,11 @@ function TextArea() {
     console.log(email);
     console.log(password);
     axios
-      .post("http://localhost:5000/delete", { ID: myID, email, password })
+      .post("https://fierce-dawn-27051.herokuapp.com/delete", {
+        ID: myID,
+        email,
+        password,
+      })
       .then((res) => {
         console.log(res.data.good);
         const array = res.data.good;
@@ -90,10 +94,12 @@ function TextArea() {
 
   let sday = today.toLocaleDateString("en-Us", options);
   return (
-    <div>
-      <h3 className="text-center text-white">Hey Welcome to Your Todo-list!</h3>
-      <h5 className="text-center text-white">{sday}</h5>
-      <div className="container">
+    <div className="row">
+      <h3 className="text-center text-white col-md-12">
+        Hey Welcome to Your Todo-list!
+      </h3>
+      <h5 className="text-center text-white col-md-12">{sday}</h5>
+      <div className="container col-md-12">
         <h1 className="heading"> Todo-List</h1>
         <div className="form">
           <form onSubmit={UpdateText}>
@@ -128,12 +134,12 @@ function TextArea() {
           })}
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center col-md-12">
         <Link className="btn btn-primary mt-2 px-4" to="/login">
           Logout
         </Link>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

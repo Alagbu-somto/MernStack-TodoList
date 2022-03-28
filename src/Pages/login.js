@@ -19,7 +19,10 @@ function Login() {
   }
   function submit(event) {
     axios
-      .post("http://localhost:5000/login", { email, password })
+      .post("https://fierce-dawn-27051.herokuapp.com/login", {
+        email,
+        password,
+      })
       .then((res) => {
         console.log(res);
         const data = res.data.status;
@@ -54,9 +57,9 @@ function Login() {
   }
 
   return (
-    <div>
-      <h1 className="text-center">Login</h1>
-      <form onSubmit={submit}>
+    <div className="row">
+      <h1 className="text-center col-md-12">Login</h1>
+      <form onSubmit={submit} className="col-md-12">
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label text-center">
             Email address
@@ -86,17 +89,17 @@ function Login() {
           />
         </div>
         <div className="text-center">
-          <button type="submit" className="btn btn-primary px-3 center">
+          <button type="submit" className="btn btn-primary px-4 center">
             Log in
           </button>
         </div>
       </form>
-      <div className="text-center">
-        <Link className="btn btn-primary mt-2 px-4" to="/">
+      <div className="text-center col-md-12">
+        <Link className="btn btn-primary mt-2 px-3" to="/">
           Register
         </Link>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
